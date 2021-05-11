@@ -38,8 +38,6 @@ def calc_time():
     times = [start_time, lunch_start, lunch_end, end_time]
     try:
         format_times = [datetime.strptime(time, '%H%M') for time in times]
-        # print()
-        # print('Total time:', format_times[3] - format_times[0] - (format_times[2] - format_times[1]))
         total_time = format_times[3] - format_times[0] - (format_times[2] - format_times[1])
         day_formatter(format_times[0], format_times[3], format_times[1], format_times[2], total_time)
     except ValueError:
